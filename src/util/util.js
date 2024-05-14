@@ -17,8 +17,8 @@ import Jimp from "jimp";
             .resize(256, 256) // resize
             .quality(60) // set JPEG quality
             .greyscale() // set greyscale
-            .write(__dirname + outpath, (img) => {
-                resolve(__dirname + outpath);
+            .write(outpath, (img) => {
+                resolve(outpath);
             });
     }).catch(err => {
         console.error(err);
